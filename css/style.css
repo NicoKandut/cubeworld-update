@@ -1,0 +1,33 @@
+* {
+    border: none !important;
+    border-radius: 0px !important;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://www.gamersglobal.de/sites/gamersglobal.de/files/galerie/19_11.jpg");
+}
+
+.page-header,
+.card-header,
+.page-footer {
+    background-color: #151515;
+    color: white;
+    margin: 0px;
+}
+
+.page-header,
+.page-footer {
+    padding: 20px;
+    width: 100%;
+}
+
+.card {
+    margin: auto;
+    max-width: 700px;
+}
+
+img {
+    max-height: 50px;
+}
+
