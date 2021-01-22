@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastUpdateOutput = document.getElementById('last-update');
     const timeOutput = document.getElementById('time');
 
-    const lastUpdate = moment('2013-07-23');
+    const lastUpdate = moment('2019-09-29');
 
     lastUpdateOutput.innerText = lastUpdate.format('MMMM Do YYYY');
 
