@@ -6,22 +6,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   lastUpdateOutput.innerText = lastUpdate.format("MMMM Do YYYY");
 
+  function pluralize(value, unit) {
+    return `${value} ${unit}${value !== 1 ? "s" : ""}`;
+  }
+
   setInterval(function () {
     let now = moment(new Date());
     let difference = now.diff(lastUpdate);
     let duration = moment.duration(difference);
     timeOutput.innerText =
-      duration.years() +
-      " years, " +
-      duration.months() +
-      " months, " +
-      duration.days() +
-      " days, " +
-      duration.hours() +
-      " hours, " +
-      duration.minutes() +
-      " minutes and " +
-      duration.seconds() +
-      " seconds";
+      pluralize(duration.years(), "year") +
+      ", " +
+      pluralize(duration.months(), "month") +
+      ", " +
+      pluralize(duration.days(), "day") +
+      ", " +
+      pluralize(duration.hours(), "hour") +
+      ", " +
+      pluralize(duration.minutes(), "minute") +
+      " and " +
+      pluralize(duration.seconds(), "second");
   }, 1000);
 });
